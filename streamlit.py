@@ -16,7 +16,7 @@ root = Root(session)
 DATABASE = "CUSTOMER_LTV_DATA"
 SCHEMA = "PUBLIC"
 STAGE = "SEMANTIC"
-FILE = "customer_liftime_value.yaml"
+FILE = "customer_lifetime_value.yaml"
 
 with st.sidebar:
         st.selectbox(
@@ -146,8 +146,8 @@ class CortexAnalyst():
 
         # fetch service
         search_service = (root
-        	.databases["SIMPLE_ML_DB"]
-        	.schemas["SIMPLE_ML_SCHEMA"]
+        	.databases[DATABASE]
+        	.schemas[SCHEMA]
         	.cortex_search_services["PROMPT_SEARCH_CUSTOMER_LTV"]
         )
         
